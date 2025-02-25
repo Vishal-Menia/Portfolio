@@ -1345,7 +1345,7 @@ button #myEmail a:hover{
     .right-container img{
         position: relative;
         top:48px;
-        left: 7px;
+        left: 3px;
         width:380px;
         height:380px;
         transform: translateY(-20px);
@@ -1435,6 +1435,9 @@ button #myEmail a:hover{
         margin-left: 41px;
         border-radius: 5rem 5rem 5rem 5rem;
      
+    }
+    .skill{
+        margin-right: 74px;
     }
 
     .mycourse {
