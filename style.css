@@ -1344,8 +1344,8 @@ button #myEmail a:hover{
     }
     .right-container img{
         position: relative;
-        top:48px;
-        left: 3px;
+        top:10px;
+        left: 1px;
         width:380px;
         height:380px;
         transform: translateY(-20px);
