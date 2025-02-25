@@ -2,7 +2,7 @@ body{
     background-color: #040720;
     font-family: 'Poppins',sans-serif;
 }
-
+/* 
 nav {
     display: flex;
     justify-content: space-between;
@@ -25,7 +25,7 @@ nav {
 }
 
 .navbar li a.active {
-    /* background-color: #555; */
+     background-color: #555; 
     border-radius: 5px;
 }
 
@@ -40,7 +40,7 @@ nav {
     height: 3px;
     background-color: white;
     margin: 4px 0;
-}
+} */
 
 
 .portfolio-container{
@@ -48,29 +48,100 @@ nav {
     width: 100%;
     display: flex;
 }
-.navbar{
+/* Navbar base styles */
+.navbar {
     margin-top: 0%;
     display: flex;
-    gap: 3.5rem; 
+    gap: 3.5rem;
     background-color: #29465b;
     height: 7vh;
-    width: 100%; 
+    width: 100%;
     justify-content: center;
     position: fixed;
     top: 0;
     z-index: 1000;
+    transition: all 0.3s ease-in-out;
 }
-.navbar li{
+
+/* Navbar items */
+.navbar li {
     list-style: none;
     margin-top: 1%;
 }
-.navbar li a{
+
+.navbar li a {
     text-decoration: none;
     text-transform: uppercase;
     font-size: 1rem;
     color: #fff;
-    position:relative
+    position: relative;
 }
+
+/* Navbar for small screens (when menu-toggle is active) */
+.navbar.column {
+    flex-direction: column;
+    height: auto; /* Allow the navbar to expand */
+    align-items: center;
+    position: fixed;
+    top: 6vh;
+    width: 102%;
+    gap: 1rem;
+    padding: 1rem 0;
+    background-color: #29465b;
+}
+
+/* Hamburger menu */
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    position: fixed;
+    top: 1rem;
+    right: 1rem;
+    z-index: 1100;
+}
+
+.menu-toggle .bar {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    margin: 4px 0;
+}
+
+/* Show hamburger menu for small screens */
+@media screen and (max-width: 768px) {
+    .menu-toggle {
+        display: flex;
+    }
+
+    .navbar {
+        display: none;
+    }
+
+    .navbar.column {
+        display: flex;
+    }
+
+    .navbar li a::after{
+        content: "";
+        position: absolute;
+        background: #fff;
+        width: 100%;
+        height: .1rem;
+        left: 0;
+        bottom: -5px;
+        transform: scaleX(0);
+        transform-origin: bottom right;
+        transition: transform .5s;
+    }
+    
+    .navbar li a:hover::after{
+        transform: scaleX(1);
+        transform-origin: bottom left ;
+    }
+}
+
+
 .left-container, .right-container{
     height: 100vh;
 
@@ -81,6 +152,8 @@ nav {
         flex-direction: row;
 
     }
+
+    
 }
 .left-container{
     background: #040720;
@@ -863,10 +936,10 @@ button #myEmail a:hover{
 
 /* Responsive Design */
 @media (max-width: 1024px) {
-    nav{
+    /* nav{
         margin-right: -27px;
         background-color: #333;
-    }
+    } */
 
     .right-container{
         display: block;
@@ -875,8 +948,8 @@ button #myEmail a:hover{
     }
     .right-container img{
         position: relative;
-        top:10%;
-        left: 100px;
+        top:48px;
+        left: 7px;
         width:380px;
         height:380px;
         transform: translateY(-20px);
@@ -943,9 +1016,15 @@ button #myEmail a:hover{
         margin-top: -40px;
     }
     .about .info, .edu .bvdu {
-        margin-left: 105px;
+        width: 100%;
+        margin-left: 0px;
     }
-
+    .edu .bvdu{
+        width: 100%;
+        margin: 1rem 0;
+        margin-left: 16px;
+        height:auto
+    }
     .bvdu img {
         height: 63px;
         width: 63px;
@@ -955,7 +1034,10 @@ button #myEmail a:hover{
     .bvdu a {
         margin-left: 5%;
         margin-bottom: 15%;
-    
+    }
+    .edu h1, .edu p {
+        margin-left: 31%;
+    }
     .left-container .icons{
         display: none;
     }
@@ -967,7 +1049,7 @@ button #myEmail a:hover{
     .menu-toggle {
         display: flex;
     }
-
+/* 
     .navbar {
         display: none;
         flex-direction: column;
@@ -982,7 +1064,7 @@ button #myEmail a:hover{
     .navbar.active {
         display: flex;
         left: 3px;
-    }
+    } */
     .project1, .project2, .project3, .project4, .project5 {
         width: 90%;
         margin-left: 50px;
@@ -1036,16 +1118,21 @@ button #myEmail a:hover{
         color: #5DB9EE;
         margin-left: 40%;
     }
+    .skillback {
+        margin-left: 39px;
+         border-radius: 5rem 5rem 5rem 5rem;
+    }
+
 
 
 }
 
 
 @media (max-width: 768px) {
-    nav{
+    /* nav{
         margin-right: -27px;
         background-color: #333;
-    }
+    } */
 
 
     .left-container, .right-container{
@@ -1058,8 +1145,8 @@ button #myEmail a:hover{
     }
     .right-container img{
         position: relative;
-        top:10%;
-        left: 100px;
+        top:48px;
+        left: 7px;
         width:380px;
         height:380px;
         transform: translateY(-20px);
@@ -1105,9 +1192,8 @@ button #myEmail a:hover{
         height: 15rem;
     }
     .about .info, .edu .bvdu {
-        width: 90%;
-        margin-left: 5%;
-        margin-left: 45px;
+        width:100%;
+        margin-left: 0px;
     }
 
     .about .info .Jammu{
@@ -1122,7 +1208,12 @@ button #myEmail a:hover{
     .edu h1, .edu p {
         margin-left: 37%;
     }
-
+    .edu .bvdu{
+        width: 100%;
+        margin: 1rem 0;
+        margin-left: 0px;
+        height:auto
+    }
     .bvdu a {
         margin-left: -2%;
         margin-bottom: 19%;
@@ -1136,7 +1227,7 @@ button #myEmail a:hover{
     }
     .skillback {
         margin-left: 56px;
-       
+         border-radius: 5rem 5rem 5rem 5rem;
     }
 
     .mycourse {
@@ -1219,7 +1310,7 @@ button #myEmail a:hover{
         display: flex;
     }
 
-    .navbar {
+    /* .navbar {
         display: none;
         flex-direction: column;
         position: absolute;
@@ -1233,18 +1324,16 @@ button #myEmail a:hover{
     .navbar.active {
         display: flex;
         left: 6px;
-    }
+    } */
 
 }
 
 @media (max-width: 576px) {
-    nav{
+    /* nav{
         margin-right: -27px;
         background-color: #333;
     }
-    .skillback{
-        margin-left: 40px;
-    }
+     */
     .left-container, .right-container{
         height: auto;
     }
@@ -1255,8 +1344,8 @@ button #myEmail a:hover{
     }
     .right-container img{
         position: relative;
-        top:10%;
-        left: 70px;
+        top:48px;
+        left: 7px;
         width:380px;
         height:380px;
         transform: translateY(-20px);
@@ -1306,7 +1395,14 @@ button #myEmail a:hover{
     .about .info, .edu .bvdu {
         width: 100%;
         margin: 1rem 0;
-        margin-left: 23px;
+        margin-left: 0px;
+    }
+
+    .edu .bvdu {
+        width: 101%;
+        margin: 1rem 0;
+        margin-left: 12px;
+        height: auto;
     }
     
     .about .info .Jammu{
@@ -1314,12 +1410,12 @@ button #myEmail a:hover{
     }
     
     .about h1{
-        margin-left: 37%;
+        margin-left: 30%;
     }
 
 
     .edu h1, .edu p {
-        margin-left: 37%;
+        margin-left: 31%;
     }
 
     .bvdu a {
@@ -1336,12 +1432,13 @@ button #myEmail a:hover{
     }
 
     .skillback {
-        margin-left: 56px;
-       
+        margin-left: 41px;
+        border-radius: 5rem 5rem 5rem 5rem;
+     
     }
 
     .mycourse {
-        margin-right: 12px;
+        margin-right: -19px;
     }
 
     .getlink {
@@ -1360,43 +1457,46 @@ button #myEmail a:hover{
         width: 100%;
         margin: 1rem 0;
         /* margin-left: 135px; */
-        margin-left: 19px;
+        margin-left: 14px;
     }
     .slider-container {
-        width: 80%;
+        width: 93%;
         margin: auto;
     }
     .slider-containerr {
-        width: 80%;
+        width: 93%;
+        height: 340px;
     }
     .slider-containerr2 {
-        width: 80%;
+        width: 93%;
     }
     .slider-containerr3 {
-        width: 80%;
+        width: 93%;
     }
 
-    .projects .project1 img{
-        width:80%;
+    .projects .project1 img {
+        width: 93%;
+        height: 351px;
     }
     .projects .project3 img {
-        margin-bottom: -40px;
-        width: 448px;
+        margin-bottom: 52px;
+        width: 385px;
+        height: 340px;
     }
     .projects .project4 img {
-        width: 448px;
+        width: 385px;
         height: 390px;
         border-radius: 8%;
     }
 
     .projects .project2 img {
-        width: 448px;
+        width: 385px;
         height: 390px;
         border-radius: 8%;
     }
 
     .projects .project5 img {
-        width: 448px;
+        width: 385px;
         height: 390px;
         border-radius: 8%;
     }
@@ -1414,7 +1514,7 @@ button #myEmail a:hover{
         display: flex;
     }
 
-    .navbar {
+    /* .navbar {
         display: none;
         flex-direction: column;
         position: absolute;
@@ -1423,15 +1523,17 @@ button #myEmail a:hover{
         background-color: #333;
         padding: 10px;
         border-radius: 5px;
-    }
+    } */
 
-    .navbar.active {
+    /* .navbar.active {
         display: flex;
         left: 6px;
-    }
+    } */
     .skills >div{
         flex: 0 1 calc(33.33% - 10px);
     }
+    
+
     
 
 }
