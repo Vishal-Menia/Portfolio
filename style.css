@@ -994,7 +994,7 @@ button #myEmail a:hover{
     }
     .content .detail {
         font-size: 1rem;
-        margin-left: 149px;
+        /* margin-left: 149px; */
     }
     .btn button {
         padding: 0.6rem 1rem;
@@ -1348,8 +1348,8 @@ button #myEmail a:hover{
 
     .btn {
         display: flex;
-        gap: 48px;
-        margin-left: 274px;
+        /* gap: 48px;
+        margin-left: 274px; */
     }
     .right-container{
         margin-top: 90px;
@@ -1358,7 +1358,7 @@ button #myEmail a:hover{
     }
     .right-container img{
         position: relative;
-        top:50px;
+        top:10px;
         left: 295px;
         width:380px;
         height:380px;
@@ -1399,20 +1399,19 @@ button #myEmail a:hover{
     }
     .content .intro {
         font-size: 1.2rem;
-        margin-left: 298px;
     }
 
 
-    .content #element {
+    /* .content #element {
         color: #5DB9EE;
-        /* font-size: 2rem; */
+        font-size: 2rem; 
         margin-left: 256px;
     }
 
     .content .detail {
         font-size: 1rem;
         margin-left: 149px;
-    }
+    } */
 
 
     .btn button {
@@ -1582,6 +1581,9 @@ button #myEmail a:hover{
     .left-container, .right-container{
         height: auto;
     }
+    .btn{
+        gap: 5px;
+    }
     .right-container{
         margin-top: 90px;
         display: block;
@@ -1630,19 +1632,6 @@ button #myEmail a:hover{
     }
     .content .intro {
         font-size: 1.2rem;
-        margin-left: -87px;
-    }
-    .btn {
-        display: flex
-;
-        gap: 48px;
-        margin-left: -35px;
-    }
-
-    .content #element {
-        color: #5DB9EE;
-        /* font-size: 2rem; */
-        margin-left: 19px;
     }
     .btn button {
         width: 100%;
