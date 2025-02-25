@@ -1,3 +1,4 @@
+
 body{
     background-color: #040720;
     font-family: 'Poppins',sans-serif;
@@ -993,6 +994,7 @@ button #myEmail a:hover{
     }
     .content .detail {
         font-size: 1rem;
+        margin-left: 149px;
     }
     .btn button {
         padding: 0.6rem 1rem;
@@ -1327,6 +1329,249 @@ button #myEmail a:hover{
     } */
 
 }
+
+
+
+@media (max-width: 980px) {
+    /* nav{
+        margin-right: -27px;
+        background-color: #333;
+    }
+     */
+    .left-container, .right-container{
+        height: auto;
+    }
+
+    .left-containe{
+        margin-left: 20px;
+    }
+
+    .btn {
+        display: flex;
+        gap: 48px;
+        margin-left: 274px;
+    }
+    .right-container{
+        margin-top: 90px;
+        display: block;
+        /* background-color: #050029; */
+    }
+    .right-container img{
+        position: relative;
+        top:10px;
+        left: 295px;
+        width:380px;
+        height:380px;
+        transform: translateY(-20px);
+        border-radius: 100%;
+        border:4px solid white;
+        box-shadow: 0 0 1rem  #fff, inset 0 0 1rem #fff, 0 0 1rem #a5b5d7, inset 0 0 1rem #cad0dc, 0 0 1rem #d5dbe6, inset 0 0 1rem #3877ff;
+
+     }
+     .design{
+        display: none;
+     }
+    /* .left-container{
+        position: absolute;
+        top:18%;
+        left:4%;
+    } */
+    /* .right-container{
+        display: none;
+    } */
+    .navbar {
+        flex-wrap: wrap;
+        font-size: 0.8rem;
+    }
+    .icons {
+        flex-direction: row;
+        gap: 0.5rem;
+    }
+    .circle:nth-child(1) {
+        display: none;
+    }
+    .circle:nth-child(2) {
+        width: 10rem;
+        height: 10rem;
+    }
+    .content h1 {
+        font-size: 1.5rem;
+    }
+    .content .intro {
+        font-size: 1.2rem;
+        margin-left: 298px;
+    }
+
+
+    .content #element {
+        color: #5DB9EE;
+        /* font-size: 2rem; */
+        margin-left: 256px;
+    }
+
+    .content .detail {
+        font-size: 1rem;
+        margin-left: 149px;
+    }
+
+
+    .btn button {
+        width: 100%;
+        margin-left:10px;
+        margin-right: 10px;
+        padding: 0.5rem;
+    }
+    .about .info, .edu .bvdu {
+        width: 100%;
+        margin: 1rem 0;
+        margin-left: 0px;
+    }
+
+    .edu .bvdu {
+        width: 101%;
+        margin: 1rem 0;
+        margin-left: 12px;
+        height: auto;
+    }
+    
+    .about .info .Jammu{
+        margin-left: 9px;
+    }
+    
+    .about h1{
+        margin-left: 41%;
+    }
+
+
+    .edu h1, .edu p {
+        margin-left: 41%;
+    }
+
+    .bvdu a {
+        margin-left: 9%;
+        margin-bottom: 2%;
+    }
+    
+
+
+    .bvdu img {
+        height: 63px;
+        width: 63px;
+        margin-left: 12%;
+        margin-bottom: 3%;
+    }
+
+    .skillback {
+        margin-left: 64px;
+        border-radius: 5rem 5rem 5rem 5rem;
+     
+    }
+    .skill{
+        margin-right: 74px;
+    }
+
+    .mycourse {
+        margin-right: -19px;
+    }
+
+    .getlink {
+        color: #b7dcf1;
+        margin-left: 42%;
+        text-decoration: none;
+    }
+    .coursetext {
+        font-size: 2rem;
+        color: #5DB9EE;
+        margin-left: 44%;
+    }
+
+
+    .project1, .project2, .project3, .project4, .project5 {
+        width: 100%;
+        margin: 1rem 0;
+        /* margin-left: 135px; */
+        margin-left: 14px;
+    }
+    .slider-container {
+        width: 93%;
+        margin: auto;
+    }
+    .slider-containerr {
+        width: 93%;
+        height: 340px;
+    }
+    .slider-containerr2 {
+        width: 93%;
+    }
+    .slider-containerr3 {
+        width: 73%;
+    }
+
+    .projects .project1 img {
+        width: 93%;
+        height: 351px;
+    }
+    .projects .project3 img {
+        margin-bottom: 52px;
+        width: 893px;
+        height: 340px;
+    }
+    .projects .project4 img {
+        width: 893px;
+        height: 390px;
+        border-radius: 8%;
+    }
+
+    .projects .project2 img {
+        width: 893px;
+        height: 390px;
+        border-radius: 8%;
+    }
+
+    .projects .project5 img {
+        width: 702px;
+        height: 390px;
+        border-radius: 8%;
+    }
+    .footer-bottom , .footer-container{
+        background-color: black;
+    }
+    .footer-bottom p{
+        margin-top: -40px;
+    }
+    .left-container .icons{
+        display: none;
+    }
+
+    .menu-toggle {
+        display: flex;
+    }
+
+    /* .navbar {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 50px;
+        right: 20px;
+        background-color: #333;
+        padding: 10px;
+        border-radius: 5px;
+    } */
+
+    /* .navbar.active {
+        display: flex;
+        left: 6px;
+    } */
+    .skills >div{
+        flex: 0 1 calc(33.33% - 10px);
+    }
+    
+
+    
+
+}
+
+
 
 @media (max-width: 576px) {
     /* nav{
